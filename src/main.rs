@@ -1,14 +1,11 @@
-mod atomic;
 
+mod atomic;
 use std::cell::Cell;
-use std::os::unix::raw::time_t;
-use std::sync::{Arc, Mutex};
+use std::sync::Mutex;
 use std::sync::atomic::AtomicI32;
-use std::thread;
+use atomic::{progress_reporting::progress_repo, statistics::statistics_report};
 use bytes::Bytes;
-use tokio::sync::mpsc;
 use tokio::time::{sleep,Duration};
-use crate::atomic::{progress_repo, stop_flag_use};
 
 #[tokio::main]
 async fn main() {
@@ -19,7 +16,8 @@ async fn main() {
     let mut b = 5;
     f(&a,&mut b);
     //stop_flag_use();
-    progress_repo();
+     progress_repo();
+    statistics_report();
 
     // let mut l = Mutex::new(3);
 

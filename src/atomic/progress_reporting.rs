@@ -27,7 +27,7 @@ pub fn progress_repo() {
     thread::scope(|s| {
         for t in 0..4{
             s.spawn(move||{
-                for i in 0..25 {
+                for _i in 0..25 {
                     process_item();
                     let _ = t*1;
                     num_done.fetch_add(1,Relaxed);
@@ -47,7 +47,7 @@ pub fn progress_repo() {
     });
 }
 
-fn process_item(){
+pub fn process_item(){
     let x = 524;
     let y= 29487;
     // sleep(Duration::from_secs(3));

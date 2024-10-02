@@ -1,5 +1,4 @@
-mod stop_flag;
-mod progress_reporting;
+pub mod stop_flag;
+pub mod progress_reporting;
+pub mod statistics;
 
-pub use stop_flag::*;
-pub use progress_reporting::*;
