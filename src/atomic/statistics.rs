@@ -17,6 +17,7 @@ pub fn statistics_report(){
                 for i in 0..25{
                     let start = Instant::now();
                     process_item();
+                    println!("{}", i*t);
                     let time_taken = start.elapsed().as_micros() as u64;
                     num_done.fetch_add(1.try_into().unwrap(), Ordering::Relaxed);
                     total_time.fetch_add(time_taken, Ordering::Relaxed);

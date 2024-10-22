@@ -1,0 +1,26 @@
+{
+	"folders": [
+		{
+			"path": "../../../../faang/python-leetcode"
+		},
+		{
+			"path": "../.."
+		},
+		{
+			"path": "../../../kafru"
+		},
+		{
+			"path": "../../../zero-to-prod"
+		},
+		{
+			"path": "../../../indexer"
+		},
+		{
+			"path": "../../../../faang/blind150"
+		},
+		{
+			"path": "../../../../faang/scraper_metrics"
+		}
+	],
+	"settings": {}
+}
