@@ -3,7 +3,7 @@ mod atomic;
 use std::cell::Cell;
 use std::sync::Mutex;
 use std::sync::atomic::AtomicI32;
-use atomic::{progress_reporting::progress_repo, statistics::statistics_report,scraper_metric::scraping};
+use atomic::{chapter16::{channels, threading1}, progress_reporting::progress_repo, scraper_metric::scraping, statistics::statistics_report};
 use bytes::Bytes;
 use tokio::time::{sleep,Duration};
 
@@ -16,7 +16,9 @@ async fn main() {
      //progress_repo();
     //statistics_report();
 
-    scraping().await;
+    //scraping().await;
+    threading1();
+    channels();
 
     // let mut l = Mutex::new(3);
 
